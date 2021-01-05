@@ -4,6 +4,7 @@
 		<class>entidades.Medico</class>
 		<class>entidades.Persona</class>
 		<class>entidades.LibroDiario</class>
+		<class>entidades.PlanCuenta</class>
 		
 		<properties>
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>

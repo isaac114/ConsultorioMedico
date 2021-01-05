@@ -1,22 +1,45 @@
 package entidades;
 
-import java.io.Serializable;
 import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: Medico
- *
+ *Autor Isaac Chavez
  */
 @Entity
+@PrimaryKeyJoinColumn(referencedColumnName="id")
 
-public class Medico implements Serializable {
+public class Medico extends Persona {
 
 	private static final long serialVersionUID = 1L;
-	@Id
-	private int codigo;
+	private String especialidad;
 
 	public Medico() {
 		super();
 	}
+	
+	
+	public Medico(int id, String nombres, String apellidos, String cedula, String correo, String telefono, String especialidad) {
+		super(id, nombres, apellidos, cedula, correo, telefono);
+		this.especialidad = especialidad;
+	}
+	
+	
+
+	public String getEspecialidad() {
+		return especialidad;
+	}
+
+
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+
+
+
+
+	
+	
    
 }

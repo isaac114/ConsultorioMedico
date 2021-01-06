@@ -12,6 +12,14 @@ public abstract class DAOFactory {
     	return factory;
     }
     
+    public abstract ConsultaClinicaDAO getConsultaClinicaDAO();
     
+    public abstract HistorialClinicoDAO getHistorialClinicoDAO();
+    
+    public abstract MedicoDAO getMedicDAO();
+    
+    public abstract PacienteDAO getPacienteDAO();
+    
+    public abstract RecetaMedicaDAO getRecetaMedicaDAO();
 
 }

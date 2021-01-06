@@ -6,7 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
 import dao.GenericDAO;
-
+/*
+ * Autor Isaac Chavez
+ */
 public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 	
     private Class<T> persistentClass;

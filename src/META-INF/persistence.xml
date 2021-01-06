@@ -9,6 +9,8 @@
 		<class>entidades.Paciente</class>
 		<class>entidades.ConsultaClinica</class>
 		<class>entidades.RecetaMedica</class>
+		<class>entidades.FacturaCabecera</class>
+		<class>entidades.FacturaDetalle</class>
 		
 		<properties>
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>

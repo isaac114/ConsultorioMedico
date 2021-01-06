@@ -1,5 +1,7 @@
 package jpa;
 
-public class JPADAOFactory {
+import dao.DAOFactory;
+
+public class JPADAOFactory extends DAOFactory{
 
 }

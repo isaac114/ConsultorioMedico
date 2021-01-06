@@ -11,6 +11,7 @@
 		<class>entidades.RecetaMedica</class>
 		<class>entidades.FacturaCabecera</class>
 		<class>entidades.FacturaDetalle</class>
+		<class>entidades.CitaMedica</class>
 		
 		<properties>
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>

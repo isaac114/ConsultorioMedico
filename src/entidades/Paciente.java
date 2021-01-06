@@ -1,13 +1,12 @@
 package entidades;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: Paciente
- *
+ * Autor Isaac Chavez
  */
 @Entity
 
@@ -17,6 +16,8 @@ public class Paciente extends Persona {
 	private static final long serialVersionUID = 1L;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "paciente")
 	private List<HistorialClinico> historial;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pacienteReceta")
+	private List<RecetaMedica> recetas;
 
 	public Paciente() {
 		super();

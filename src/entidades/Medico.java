@@ -1,5 +1,7 @@
 package entidades;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -13,6 +15,8 @@ public class Medico extends Persona {
 
 	private static final long serialVersionUID = 1L;
 	private String especialidad;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "medico")
+	private List<HistorialClinico> historial;
 
 	public Medico() {
 		super();

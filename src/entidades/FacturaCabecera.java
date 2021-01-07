@@ -26,7 +26,7 @@ public class FacturaCabecera implements Serializable {
 	@JoinColumn
 	private Paciente pacienteFactura;
 	
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "facturaDetalleCabecera")
 	private List<FacturaDetalle> listaFacturaDetalle;
 	
 	

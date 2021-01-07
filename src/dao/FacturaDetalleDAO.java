@@ -1,5 +1,6 @@
 package dao;
 
-public interface FacturaDetalleDAO {
+import entidades.FacturaDetalle;
+public interface FacturaDetalleDAO extends GenericDAO<FacturaDetalle,Integer> {
 
 }

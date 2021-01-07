@@ -21,13 +21,15 @@ public class test {
 		ConsultaClinicaDAO consultaDao = DAOFactory.getFactory().getConsultaClinicaDAO();
 		RecetaMedicaDAO recetaDao = DAOFactory.getFactory().getRecetaMedicaDAO();
 		OrdenMedicaDAO ordenDao = DAOFactory.getFactory().getOrdenMedicaDAO();
-	      
+		System.out.println();  
+		
 	    Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Obstetra");
 	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we");
 	    HistorialClinico hc = new HistorialClinico(0, med, pac);
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
 	    OrdenMedica om = new OrdenMedica(0, "7/1/2021", "Resonancia Magnetica", pac, med);
+	    
 	    //Create
 	    System.out.println("Creando");
 	    medicoDao.create(med);
@@ -45,6 +47,7 @@ public class test {
 	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
 	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
 	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
+	    System.out.println();
 	    
 	    //Actualizando
 	    System.out.println("Actualizando");
@@ -65,8 +68,7 @@ public class test {
 	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
 	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
 	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
-	    
-	    
+	   
 	    System.out.println("Termina");
 	     
 	}

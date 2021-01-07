@@ -19,6 +19,7 @@ public class FacturaDetalle implements Serializable {
 	private String descripcionFacturaDetalle;
 	
 	@ManyToOne
+	@JoinColumn
 	private FacturaCabecera facturaDetalleCabecera;
 	
 	

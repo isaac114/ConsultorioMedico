@@ -1,6 +1,7 @@
 package entidades;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 
@@ -17,12 +18,12 @@ public class FacturaCabecera implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idFacturaCabecera;
-	
 	private double totalFacturaCabecera;
 	private double subtotalFacturaCabecera;
 	private double ivaFacturaCabecera;
 	
 	@ManyToOne
+	@JoinColumn
 	private Paciente pacienteFactura;
 	
 	@OneToMany
@@ -32,18 +33,17 @@ public class FacturaCabecera implements Serializable {
 	
 	public FacturaCabecera() {
 		super();
-	}
+	}	
 
-	public FacturaCabecera(double totalFacturaCabecera, double subtotalFacturaCabecera, double ivaFacturaCabecera,
-			Paciente pacienteFactura, List<FacturaDetalle> listaFacturaDetalle) {
+	public FacturaCabecera(double totalFacturaCabecera, double subtotalFacturaCabecera, double ivaFacturaCabecera) {
 		super();
 		this.totalFacturaCabecera = totalFacturaCabecera;
 		this.subtotalFacturaCabecera = subtotalFacturaCabecera;
 		this.ivaFacturaCabecera = ivaFacturaCabecera;
-		this.pacienteFactura = pacienteFactura;
-		this.listaFacturaDetalle = listaFacturaDetalle;
 	}
 
+	
+	
 	public int getIdFacturaCabecera() {
 		return idFacturaCabecera;
 	}

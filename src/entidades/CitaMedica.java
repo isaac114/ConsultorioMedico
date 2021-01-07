@@ -15,6 +15,7 @@ public class CitaMedica implements Serializable {
 
 	
 	private static final long serialVersionUID = 1L;
+	@Id
 	private int id;
 	private Date fecha;
 	private String nombreSala;

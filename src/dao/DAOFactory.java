@@ -21,5 +21,7 @@ public abstract class DAOFactory {
     public abstract PacienteDAO getPacienteDAO();
     
     public abstract RecetaMedicaDAO getRecetaMedicaDAO();
+    
+    public abstract OrdenMedicaDAO getOrdenMedicaDAO();
 
 }

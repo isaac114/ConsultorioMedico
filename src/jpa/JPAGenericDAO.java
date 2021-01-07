@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import dao.GenericDAO;
 /*
@@ -33,6 +34,37 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
 		}
 		
 	}
-	
+    
+    @Override
+    public void update(T entity) {
+	em.getTransaction().begin();
+	try {
+	    em.merge(entity);
+	    em.getTransaction().commit();
+	} catch (Exception e) {
+	    System.out.println(">>>> ERROR:JPAGenericDAO:update " + e);
+	    if (em.getTransaction().isActive())
+		em.getTransaction().rollback();
+		}
+    }
 
+    public T read(ID id) {
+    	return em.find(persistentClass, id);
+    	
+    }
+
+    public void delete(T entity) {
+    	em.getTransaction().begin();
+    	try {
+    	    em.remove(entity);
+    	    em.getTransaction().commit();
+    	} catch (Exception e) {
+    	    System.out.println(">>>> ERROR:JPAGenericDAO:delete " + e);
+    	    if (em.getTransaction().isActive())
+    		em.getTransaction().rollback();
+    	}
+        }
+
+
+	
 }

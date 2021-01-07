@@ -17,6 +17,8 @@ public class Medico extends Persona {
 	private String especialidad;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "medico")
 	private List<HistorialClinico> historial;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "medicoOrdenMedica")
+	private List<OrdenMedica> ordenMedica;
 
 	public Medico() {
 		super();

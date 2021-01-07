@@ -20,6 +20,8 @@ public class Paciente extends Persona {
 	private List<RecetaMedica> recetas;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "citaMedica")
 	private List<CitaMedica> citaMedicas;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pacienteOrdenMedica")
+	private List<OrdenMedica> ordenMedica;
 	public Paciente() {
 		super();
 	}

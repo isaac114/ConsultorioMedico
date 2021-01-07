@@ -1,7 +1,5 @@
 package entidades;
 
-import java.util.List;
-
 import dao.ConsultaClinicaDAO;
 import dao.DAOFactory;
 import dao.HistorialClinicoDAO;
@@ -24,8 +22,8 @@ public class Test {
 		RecetaMedicaDAO recetaDao = DAOFactory.getFactory().getRecetaMedicaDAO();
 		OrdenMedicaDAO ordenDao = DAOFactory.getFactory().getOrdenMedicaDAO();
 	      
-	    Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Pbstetra");
-	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we", "Cirugano");
+	    Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Obstetra");
+	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we");
 	    HistorialClinico hc = new HistorialClinico(0, med, pac);
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
@@ -68,7 +66,7 @@ public class Test {
 	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
 	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
 	    
-	   
+	    
 	    System.out.println("Termina");
 	     
 	}

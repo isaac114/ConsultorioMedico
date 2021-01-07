@@ -1,6 +1,7 @@
 package entidades;
 
 import dao.ConsultaClinicaDAO;
+
 import dao.DAOFactory;
 import dao.HistorialClinicoDAO;
 import dao.MedicoDAO;

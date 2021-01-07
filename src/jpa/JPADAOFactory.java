@@ -1,5 +1,6 @@
 package jpa;
 
+import dao.CitaMedicaDAO;
 import dao.ConsultaClinicaDAO;
 import dao.DAOFactory;
 import dao.HistorialClinicoDAO;
@@ -44,6 +45,12 @@ public class JPADAOFactory extends DAOFactory{
 	public OrdenMedicaDAO getOrdenMedicaDAO() {
 		// TODO Auto-generated method stub
 		return new JPAOrdenMedicaDAO();
+	}
+
+	@Override
+	public CitaMedicaDAO getCitaMedicaDAO() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

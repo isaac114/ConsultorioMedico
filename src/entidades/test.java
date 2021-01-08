@@ -4,6 +4,8 @@ import dao.CitaMedicaDAO;
 import dao.ConsultaClinicaDAO;
 
 import dao.DAOFactory;
+import dao.FacturaCabeceraDAO;
+import dao.FacturaDetalleDAO;
 import dao.HistorialClinicoDAO;
 import dao.MedicoDAO;
 import dao.OrdenMedicaDAO;
@@ -24,6 +26,8 @@ public class test {
 		RecetaMedicaDAO recetaDao = DAOFactory.getFactory().getRecetaMedicaDAO();
 		OrdenMedicaDAO ordenDao = DAOFactory.getFactory().getOrdenMedicaDAO();
 		CitaMedicaDAO citaMedicaDAO = DAOFactory.getFactory().getCitaMedicaDAO();
+		FacturaCabeceraDAO facCabDAO = DAOFactory.getFactory().getFacturaCabeceraDAO();
+		FacturaDetalleDAO facDetDAO = DAOFactory.getFactory().getFacturaDetalleDAO();
 		System.out.println();  
 		
 	    Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Obstetra");
@@ -33,6 +37,7 @@ public class test {
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
 	    OrdenMedica om = new OrdenMedica(0, "7/1/2021", "Resonancia Magnetica", pac, med);
 	    CitaMedica citaMedica1 = new CitaMedica(0,"7/1/2021","Sala 1",med,pac );
+	    //FacturaCabecera facCab = new FacturaCabecera(35.23, 4.23, 39.46);
 	    
 	    //Create
 	    System.out.println("Creando");

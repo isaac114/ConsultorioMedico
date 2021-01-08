@@ -3,6 +3,8 @@ package jpa;
 import dao.CitaMedicaDAO;
 import dao.ConsultaClinicaDAO;
 import dao.DAOFactory;
+import dao.FacturaCabeceraDAO;
+import dao.FacturaDetalleDAO;
 import dao.HistorialClinicoDAO;
 import dao.MedicoDAO;
 import dao.OrdenMedicaDAO;
@@ -49,6 +51,18 @@ public class JPADAOFactory extends DAOFactory{
 
 	@Override
 	public CitaMedicaDAO getCitaMedicaDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FacturaCabeceraDAO getFacturaCabeceraDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FacturaDetalleDAO getFacturaDetalleDAO() {
 		// TODO Auto-generated method stub
 		return null;
 	}

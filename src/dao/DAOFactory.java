@@ -25,5 +25,9 @@ public abstract class DAOFactory {
     public abstract OrdenMedicaDAO getOrdenMedicaDAO();
     
     public abstract CitaMedicaDAO getCitaMedicaDAO();
+    
+    public abstract FacturaCabeceraDAO getFacturaCabeceraDAO();
+    
+    public abstract FacturaDetalleDAO getFacturaDetalleDAO();
 
 }

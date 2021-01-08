@@ -65,6 +65,4 @@ public class JPAGenericDAO<T, ID> implements GenericDAO<T, ID> {
     	}
         }
 
-
-	
 }

@@ -1,6 +1,7 @@
 package jpa;
 
 import dao.CitaMedicaDAO;
+
 import entidades.CitaMedica;
 
 

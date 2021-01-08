@@ -52,7 +52,7 @@ public class JPADAOFactory extends DAOFactory{
 	@Override
 	public CitaMedicaDAO getCitaMedicaDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPACitaMedicaDAO();
 	}
 
 	@Override

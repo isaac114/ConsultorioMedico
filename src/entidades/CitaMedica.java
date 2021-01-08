@@ -20,7 +20,12 @@ public class CitaMedica implements Serializable {
 	private int id;
 	private String fecha;
 	private String nombreSala;
+	@ManyToOne
+	@JoinColumn
+	
 	private Medico medico;
+	@ManyToOne
+	@JoinColumn
 	private Paciente paciente;
 	@ManyToOne
 	@JoinColumn

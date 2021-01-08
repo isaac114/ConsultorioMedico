@@ -13,7 +13,7 @@ class JPAFacturaDetalleDAOTest {
 
 	FacturaDetalleDAO facturaDetalleDAO = DAOFactory.getFactory().getFacturaDetalleDAO();
 	FacturaDetalle facturaDetalle = new FacturaDetalle("Rayos X",22.5);
-	int tiempoLimite = 100;
+	int tiempoLimite = 70;
     //Test para la Creacion de la Factura
 	@Test
 	void testTimeCreate() {

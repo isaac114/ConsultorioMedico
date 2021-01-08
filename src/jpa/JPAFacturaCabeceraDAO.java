@@ -12,15 +12,8 @@ public class JPAFacturaCabeceraDAO extends JPAGenericDAO<FacturaCabecera, Intege
 		// TODO Auto-generated constructor stub
 	}
 
-	
 	@Override
-	public double obtenerIva(double base, double porcentaje) {
-        return base * porcentaje / 100;
-    }
-	
-	@Override
-	public double calcularTotalFactura(double subtotal, double ivaFacturaCabecera) {
-		double iva=(ivaFacturaCabecera*subtotal)/100;
+	public double calcularTotalFactura(double subtotal, double iva) {
 		return subtotal+iva;
 	}
 
@@ -31,6 +24,13 @@ public class JPAFacturaCabeceraDAO extends JPAGenericDAO<FacturaCabecera, Intege
 			subtotal= subtotal + listaFacturaDetalle.get(i).getCostoFacturaDetalle();
 		}
 		return subtotal;
+	}
+
+	@Override
+	public double calcularIvaFactura(double subtotal, double porcentaje) {
+
+		double iva=(porcentaje*subtotal)/100;
+		return iva;
 	}
 
 }

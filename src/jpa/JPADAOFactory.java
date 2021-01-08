@@ -58,13 +58,13 @@ public class JPADAOFactory extends DAOFactory{
 	@Override
 	public FacturaCabeceraDAO getFacturaCabeceraDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAFacturaCabeceraDAO();
 	}
 
 	@Override
 	public FacturaDetalleDAO getFacturaDetalleDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAFacturaDetalleDAO();
 	}
 
 	

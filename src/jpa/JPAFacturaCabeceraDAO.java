@@ -7,8 +7,8 @@ import entidades.FacturaCabecera;
 import entidades.FacturaDetalle;
 public class JPAFacturaCabeceraDAO extends JPAGenericDAO<FacturaCabecera, Integer> implements FacturaCabeceraDAO{
 
-	public JPAFacturaCabeceraDAO(Class<FacturaCabecera> persistentClass) {
-		super(persistentClass);
+	public JPAFacturaCabeceraDAO() {
+		super(FacturaCabecera.class);
 		// TODO Auto-generated constructor stub
 	}
 

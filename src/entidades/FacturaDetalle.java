@@ -17,7 +17,7 @@ public class FacturaDetalle implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idFacturaDetalle;
 	private String descripcionFacturaDetalle;
-	
+	private double costoFacturaDetalle;
 	@ManyToOne
 	@JoinColumn
 	private FacturaCabecera facturaDetalleCabecera;
@@ -28,10 +28,10 @@ public class FacturaDetalle implements Serializable {
 	}
 
 
-	public FacturaDetalle(String descripcionFacturaDetalle, FacturaCabecera facturaDetalleCabecera) {
+	public FacturaDetalle(String descripcionFacturaDetalle, double costoFacturaDetalle) {
 		super();
 		this.descripcionFacturaDetalle = descripcionFacturaDetalle;
-		this.facturaDetalleCabecera = facturaDetalleCabecera;
+		this.costoFacturaDetalle= costoFacturaDetalle;
 	}
 
 
@@ -55,6 +55,17 @@ public class FacturaDetalle implements Serializable {
 	}
 
 	
+	
+	public double getCostoFacturaDetalle() {
+		return costoFacturaDetalle;
+	}
+
+
+	public void setCostoFacturaDetalle(double costoFacturaDetalle) {
+		this.costoFacturaDetalle = costoFacturaDetalle;
+	}
+
+
 	public FacturaCabecera getFacturaDetalleCabecera() {
 		return facturaDetalleCabecera;
 	}
@@ -68,8 +79,12 @@ public class FacturaDetalle implements Serializable {
 	@Override
 	public String toString() {
 		return "FacturaDetalle [idFacturaDetalle=" + idFacturaDetalle + ", descripcionFacturaDetalle="
-				+ descripcionFacturaDetalle + ", facturaDetalleCabecera=" + facturaDetalleCabecera + "]";
+				+ descripcionFacturaDetalle + ", costoFacturaDetalle=" + costoFacturaDetalle
+				+ ", facturaDetalleCabecera=" + facturaDetalleCabecera + "]";
 	}
+
+	
+
 	
    
 }

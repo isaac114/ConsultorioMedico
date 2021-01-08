@@ -4,9 +4,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-import dao.CitaMedicaDAO;
-import dao.DAOFactory;
-import entidades.CitaMedica;
+
 
 
 /**
@@ -58,7 +56,7 @@ public class TestBD implements ServletContextListener {
     	operadoraDAO.create(ope4); 
       */
     
-    	CitaMedicaDAO citaMedicaDAO = DAOFactory.getFactory().getCitaMedicaDAO();
+
     	
     	
     }

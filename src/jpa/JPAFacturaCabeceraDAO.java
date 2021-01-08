@@ -9,8 +9,9 @@ public class JPAFacturaCabeceraDAO extends JPAGenericDAO<FacturaCabecera, Intege
 
 	public JPAFacturaCabeceraDAO() {
 		super(FacturaCabecera.class);
-		// TODO Auto-generated constructor stub
+		
 	}
+	//Metodos adicionales de la clase Factura Cabecera
 
 	@Override
 	public double calcularTotalFactura(double subtotal, double iva) {

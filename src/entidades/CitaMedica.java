@@ -18,7 +18,7 @@ public class CitaMedica implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private Date fecha;
+	private String fecha;
 	private String nombreSala;
 	private Medico medico;
 	private Paciente paciente;
@@ -31,7 +31,7 @@ public class CitaMedica implements Serializable {
 	}
 
 	
-	public CitaMedica(int id, Date fecha, String nombreSala, Medico medico, Paciente paciente) {
+	public CitaMedica(int id, String fecha, String nombreSala, Medico medico, Paciente paciente) {
 		super();
 		this.id = id;
 		this.fecha = fecha;
@@ -50,11 +50,11 @@ public class CitaMedica implements Serializable {
 		this.id = id;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 

@@ -20,6 +20,7 @@ public class LibroDiario implements Serializable {
 	private double costoTransaccion;
 	private String fecha;
 	private String cuentaInvolucrada;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "libroDiario")
 	private List<PlanCuenta> planCuenta;
 	
 	public LibroDiario() {

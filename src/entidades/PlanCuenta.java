@@ -19,6 +19,9 @@ public class PlanCuenta implements Serializable {
 	private int id;
 	private double activos;
 	private double pasivos; 
+	@ManyToOne
+	@JoinColumn
+	private LibroDiario libroDiario;
 
 	public PlanCuenta() {
 		super();

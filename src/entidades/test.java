@@ -51,7 +51,7 @@ public class test {
 	    //Buscando
 	    System.out.println("Buscando");
 	    System.out.println("Medico: "+medicoDao.read(1).getNombres());
-	    System.out.println("Paciente: "+pacienteDao.read(2).getCedula());
+	    System.out.println("Paciente: "+pacienteDao.read(1).getCedula());
 	    System.out.println("Historial: "+historialDao.read(1).getMedico().getEspecialidad());
 	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
 	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());

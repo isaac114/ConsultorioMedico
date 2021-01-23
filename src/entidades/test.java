@@ -36,7 +36,8 @@ public class test {
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
 	    OrdenMedica om = new OrdenMedica(0, "7/1/2021", "Resonancia Magnetica", pac, med);
-	    CitaMedica citaMedica1 = new CitaMedica(0,"7/1/2021","Sala 1",med,pac );
+	    CitaMedica citaMedica = new CitaMedica(0, "7/1/2021", "Sala 1", med, pac);
+	    
 	    //FacturaCabecera facCab = new FacturaCabecera(35.23, 4.23, 39.46);
 	    
 	    //Create
@@ -47,7 +48,8 @@ public class test {
 	    consultaDao.create(cc);
 	    recetaDao.create(rm);
 	    ordenDao.create(om);
-	    citaMedicaDAO.create(citaMedica1);
+	    citaMedicaDAO.create(citaMedica);
+	    
 	    //Buscando
 	    System.out.println("Buscando");
 	    System.out.println("Medico: "+medicoDao.read(1).getNombres());
@@ -56,7 +58,7 @@ public class test {
 	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
 	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
 	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
-	    System.out.println("Cita Medica: "+citaMedicaDAO.read(1).getFecha());
+	    //System.out.println("Cita Medica: "+citaMedicaDAO.read(1).getFecha());
 	    System.out.println();
 	    
 	    //Actualizando

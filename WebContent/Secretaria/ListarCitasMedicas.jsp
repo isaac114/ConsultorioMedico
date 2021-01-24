@@ -90,8 +90,10 @@
 			      <th scope="col">ID</th>
 			      <th scope="col">Fecha</th>
 			      <th scope="col">Salas </th>
-			      <th scope="col">Paciente </th>
-			      <th scope="col">Medico </th>
+			      <th scope="col">Paciente-Nombres </th>
+			      <th scope="col">Paciente-Apellidos </th>
+			      <th scope="col">Medico-Nombres </th>
+			      <th scope="col">Medico-Apellidos </th>
 			    </tr>
 			  </thead>
 			  <tbody class="bg-light">
@@ -104,7 +106,9 @@
 		               <td><%out.println(cita.getFecha());%></td>
 		               <td><%out.println(cita.getNombreSala());%></td>
 		               <td><%out.println(cita.getMedico().getNombres());%></td>
+		               <td><%out.println(cita.getMedico().getApellidos());%></td>
 		               <td><%out.println(cita.getPaciente().getNombres());%></td>
+		               <td><%out.println(cita.getPaciente().getApellidos());%></td>
 		          		</tr>
 		              <% } %>
 			  </tbody>

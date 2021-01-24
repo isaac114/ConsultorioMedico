@@ -30,8 +30,8 @@ public class test {
 		FacturaDetalleDAO facDetDAO = DAOFactory.getFactory().getFacturaDetalleDAO();
 		System.out.println();  
 		
-	    Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Obstetra");
-	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we");
+	    Medico med = new Medico(0, "Eduardo", "Chavez", "12", "isaac.114", "01072653", "Obstetra");
+	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "34", "we", "we");
 	    HistorialClinico hc = new HistorialClinico(0, med, pac);
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
@@ -50,38 +50,7 @@ public class test {
 	    ordenDao.create(om);
 	    citaMedicaDAO.create(citaMedica);
 	    
-	    //Buscando
-	    System.out.println("Buscando");
-	    System.out.println("Medico: "+medicoDao.read(1).getNombres());
-	    System.out.println("Paciente: "+pacienteDao.read(1).getCedula());
-	    System.out.println("Historial: "+historialDao.read(1).getMedico().getEspecialidad());
-	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
-	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
-	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
-	    //System.out.println("Cita Medica: "+citaMedicaDAO.read(1).getFecha());
-	    System.out.println();
 	    
-	    //Actualizando
-	    System.out.println("Actualizando");
-	    med.setNombres("Juan Antonio");
-	    medicoDao.update(med);
-	    pac.setCedula("1");
-	    pacienteDao.update(pac);
-	    cc.setDiagnostico("Covid19");
-	    consultaDao.update(cc);
-	    rm.setFrecuencia("never");
-	    recetaDao.update(rm);
-	    om.setFecha("11/11/11");
-	    ordenDao.update(om);
-	    System.out.println("Reimprimiendo");
-	    System.out.println("Medico: "+medicoDao.read(1).getNombres());
-	    System.out.println("Paciente: "+pacienteDao.read(2).getCedula());
-	    System.out.println("Historial: "+historialDao.read(1).getMedico().getEspecialidad());
-	    System.out.println("Consulta: "+consultaDao.read(1).getDiagnostico());
-	    System.out.println("Receta:" +recetaDao.read(1).getMedicamento());
-	    System.out.println("Orden: "+ordenDao.read(1).getFecha());
-	   
-	    System.out.println("Termina");
 	     
 	}
 

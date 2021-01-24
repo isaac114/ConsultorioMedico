@@ -5,7 +5,6 @@
 		<class>entidades.Persona</class>
 		<class>entidades.LibroDiario</class>
 		<class>entidades.PlanCuenta</class>
-		<class>entidades.HistorialClinico</class>
 		<class>entidades.Paciente</class>
 		<class>entidades.ConsultaClinica</class>
 		<class>entidades.RecetaMedica</class>
@@ -13,9 +12,10 @@
 		<class>entidades.FacturaDetalle</class>
 		<class>entidades.CitaMedica</class>
 		<class>entidades.OrdenMedica</class>
+		<class>entidades.HistorialClinico</class>
 		
 		<properties>
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.ddl-generation" value="create-tables"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/software?serverTimezone=UTC"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>

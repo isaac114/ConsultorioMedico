@@ -14,7 +14,10 @@ import dao.DAOFactory;
 import dao.HistorialClinicoDAO;
 import dao.MedicoDAO;
 import dao.PacienteDAO;
+import entidades.ConsultaClinica;
+import entidades.HistorialClinico;
 import entidades.Medico;
+import entidades.Paciente;
 
 /**
  * Servlet implementation class AgregarConsulta
@@ -58,7 +61,15 @@ public class AgregarConsulta extends HttpServlet {
 		ConsultaClinicaDAO consultaDAO = DAOFactory.getFactory().getConsultaClinicaDAO();
 		
 		Medico medico = medicoDAO.buscarPorCedula(CIDoctor);
+		Paciente paciente = pacienteDAO.buscarPorCedula(CIPaciente);
 		
+		HistorialClinico hc = hcDAO.buscarPorPersona(paciente.getId());
+		
+		if(medico != null && paciente != null && hc != null) {
+			ConsultaClinica consulta = new ConsultaClinica(0, sintoma, diagnostico, hc);
+			consultaDAO.create(consulta);
+			System.out.println("Agregado");
+		}
 	}
 
 }

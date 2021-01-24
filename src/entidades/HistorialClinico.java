@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+@Table(name="HistorialClinico")
 public class HistorialClinico implements Serializable {
 
 	

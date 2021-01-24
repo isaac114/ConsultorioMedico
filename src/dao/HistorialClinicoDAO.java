@@ -6,4 +6,5 @@ import entidades.HistorialClinico;
 
 public interface HistorialClinicoDAO extends GenericDAO<HistorialClinico, Integer> {
 
+	public abstract HistorialClinico buscarPorPersona(int personaID);
 }

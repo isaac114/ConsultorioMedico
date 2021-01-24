@@ -35,19 +35,12 @@ public class ListarCitas extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		List<CitaMedica> ciList = DAOFactory.getFactory().getCitaMedicaDAO().read(id);
-		//System.out.println("Total de Requerimientos " + reqListEmpresa.size());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		//CitaMedica citObj = DAOFactory.getFactory().getCitaMedicaDAO();
 		
-		if(reqListEmpresa!=null) {
-		for(int i=0;i<reqListEmpresa.size();i++) {
-			Set<DetRequerimiento> reqListDetReq = new HashSet<DetRequerimiento>() ;
-			List<DetRequerimiento> lista=DAOFactory.getFactory().getDetRequerimientoDAO().finByRequerimientoID(reqListEmpresa.get(i).getIdReq());
-			reqListDetReq.addAll(lista);
-			reqListEmpresa.get(i).setDetRequerimientos(reqListDetReq);
-		}}
-			
-		session.setAttribute("listReqEmp", reqListEmpresa);
+		List<CitaMedica> citas = DAOFactory.getFactory().getCitaMedicaDAO().findCitasMedicas();
+		request.setAttribute("citas", citas);
+		request.getRequestDispatcher("Secretaria/ListarCitasMedicas.jsp").forward(request, response);
 	}
 
 	/**

@@ -36,8 +36,9 @@ public class test {
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);
 	    OrdenMedica om = new OrdenMedica(0, "7/1/2021", "Resonancia Magnetica", pac, med);
-	    CitaMedica citaMedica = new CitaMedica(0, "7/1/2021", "Sala 1", med, pac);
-	    
+	    CitaMedica citaMedica = new CitaMedica(0, "7/1/2021", "Sala 1");
+	    citaMedica.setMedico(med);
+	    citaMedica.setPaciente(pac);
 	    //FacturaCabecera facCab = new FacturaCabecera(35.23, 4.23, 39.46);
 	    
 	    //Create

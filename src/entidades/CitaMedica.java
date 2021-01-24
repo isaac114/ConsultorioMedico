@@ -24,9 +24,7 @@ public class CitaMedica implements Serializable {
 	@JoinColumn
 	
 	private Medico medico;
-	@ManyToOne
-	@JoinColumn
-	private Paciente paciente;
+	
 	@ManyToOne
 	@JoinColumn
 	private Paciente citaMedica;
@@ -36,13 +34,12 @@ public class CitaMedica implements Serializable {
 	}
 
 	
-	public CitaMedica(int id, String fecha, String nombreSala, Medico medico, Paciente paciente) {
+	public CitaMedica(int id, String fecha, String nombreSala) {
 		super();
 		this.id = id;
 		this.fecha = fecha;
 		this.nombreSala = nombreSala;
-		this.medico = medico;
-		this.paciente = paciente;
+		
 	}
 
 
@@ -80,17 +77,17 @@ public class CitaMedica implements Serializable {
 	}
 
 	public Paciente getPaciente() {
-		return paciente;
+		return citaMedica;
 	}
 
-	public void setPaciente(Paciente paciente) {
-		this.paciente = paciente;
+	public void setPaciente(Paciente citaMedica) {
+		this.citaMedica = citaMedica;
 	}
 
 	@Override
 	public String toString() {
 		return "CitaMedica [id=" + id + ", fecha=" + fecha + ", nombreSala=" + nombreSala + ", medico=" + medico
-				+ ", paciente=" + paciente + "]";
+				+ ", citaMedica=" + citaMedica + "]";
 	}
    
 	

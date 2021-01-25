@@ -85,9 +85,9 @@
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/AgregarReceta">Agregar
+							href="http://localhost:8080/ConsultorioMedico/Administrador/agregarConsulta.jsp">Agregar
 							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/AgregarReceta">Eliminar
+							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
 							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
 							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
 							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
@@ -132,9 +132,38 @@
 			</div>
 
 			<div class=col-xs-4>
-				<h2 style="color: white; font-size: 30px">Ventana de Administrador</h2>
+				<div></div>
+				<div>
+					<h2 style="color: white; font-size: 25px">Agregar Consulta Medica</h2>
+				</div>
 				<div style="height: 30px"></div>
-				
+				<form method="post"
+					action="/ConsultorioMedico/AgregarReceta">
+					<div class="form-group">
+						<label style="color: white; font-size: 22px" for="nombre">Medicamento</label> 
+						<input style="font-size: 18px" type="text" class="form-control"
+							id="medicamento" name="medicamento" placeholder="Nombre Medicamento">
+					</div>
+					<div class="form-group">
+						<label style="color: white; font-size: 22px" for="descripcion">Cantidad</label>
+						<input style="font-size: 18px" type="text" class="form-control"
+							id="cantidad" name="cantidad"
+							placeholder="Ingrese la Cantidad">
+					</div>
+					<div class="form-group">
+						<label style="color: white; font-size: 22px" for="precio">Frecuencia</label>
+						<input style="font-size: 18px" type="text" class="form-control"
+							id="frecuencia" name="frecuencia" placeholder="Ingrese la Frecuencia">
+					</div>
+					<div class="form-group">
+						<label style="color: white; font-size: 22px" for="precio">C.I Paciente</label>
+						<input style="font-size: 18px" type="text" class="form-control"
+							id="paciente" name="paciente" placeholder="Cedula del Paciente">
+					</div>
+
+					<button style="font-size: 18px" type="Agregar"
+						class="btn btn-primary">Agregar</button>
+				</form>
 			</div>
 
 		</div>

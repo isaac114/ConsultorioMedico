@@ -32,7 +32,7 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
 	rel="stylesheet">
-<title>Administrador</title>
+<title>Document</title>
 
 </head>
 <body style="background-color: #575757;">
@@ -134,34 +134,18 @@
 			<div class=col-xs-4>
 				<div></div>
 				<div>
-					<h2 style="color: white; font-size: 25px">Agregar Consulta Medica</h2>
+					<h2 style="color: white; font-size: 25px">Agregar Orden  Medica</h2>
 				</div>
 				<div style="height: 30px"></div>
 				<form method="post"
-					action="/ConsultorioMedico/AgregarConsulta">
+					action="/ConsultorioMedico/EliminarConsulta">
 					<div class="form-group">
 						<label style="color: white; font-size: 22px" for="nombre">C.I del Paciente</label> 
 						<input style="font-size: 18px" type="text" class="form-control"
 							id="CIpaciente" name="CIpaciente" placeholder="Ingrese la Descripcion">
 					</div>
-					<div class="form-group">
-						<label style="color: white; font-size: 22px" for="descripcion">C.I Doctor</label>
-						<input style="font-size: 18px" type="text" class="form-control"
-							id="CIdoctor" name="CIdoctor"
-							placeholder="Ingrese la Descripcion">
-					</div>
-					<div class="form-group">
-						<label style="color: white; font-size: 22px" for="precio">Sintomas</label>
-						<input style="font-size: 18px" type="text" class="form-control"
-							id="sintoma" name="sintoma" placeholder="Ingrese la Descripcion">
-					</div>
-					<div class="form-group">
-						<label style="color: white; font-size: 22px" for="precio">Diagnostico</label>
-						<input style="font-size: 18px" type="text" class="form-control"
-							id="Diagnostico" name="Diagnostico" placeholder="Ingrese la Descripcion">
-					</div>
 
-					<button style="font-size: 18px" type="Agregar"
+					<button style="font-size: 18px" type="Eliminar"
 						class="btn btn-primary">Agregar</button>
 				</form>
 			</div>

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.DAOFactory;
 import dao.FacturaCabeceraDAO;
+import dao.FacturaDetalleDAO;
 import dao.PacienteDAO;
 import entidades.FacturaCabecera;
 import entidades.FacturaDetalle;
@@ -54,9 +55,9 @@ public class AgregarFactura extends HttpServlet {
 		HttpSession sesion = request.getSession();
 		Paciente paciente = (Paciente)sesion.getAttribute("busquedaPaciente");
 		FacturaCabeceraDAO facturaCDAO= DAOFactory.getFactory().getFacturaCabeceraDAO();
+		FacturaDetalleDAO facturaDDAO = DAOFactory.getFactory().getFacturaDetalleDAO();
 		PacienteDAO pacDAO = DAOFactory.getFactory().getPacienteDAO();
 		FacturaCabecera facturaC = new FacturaCabecera(total, subtotal ,iva);
-		ArrayList<FacturaDetalle> listFacuraDetalle = new ArrayList<FacturaDetalle>();
 		if(paciente==null) {
 			String cedula=request.getParameter("cedula");
 			String nombres=request.getParameter("nombres");
@@ -66,25 +67,27 @@ public class AgregarFactura extends HttpServlet {
 			Paciente pacienteNuevo=new Paciente(0,nombres,apellidos,cedula,correo,telefono);
 			pacDAO.create(pacienteNuevo);
 			facturaC.setPacienteFactura(pacienteNuevo);
+			facturaCDAO.create(facturaC);
 			for (int i = 1; i <= catidadFactura; i++) {
 	    		double costo = Double.parseDouble(request.getParameter("costo"+i));
 	    		String descripcion = request.getParameter("desc"+i);
 	    		FacturaDetalle facturaDet = new FacturaDetalle(descripcion, costo);
-	    		listFacuraDetalle.add(facturaDet);
+	    		facturaDet.setFacturaDetalleCabecera(facturaC);
+	    		facturaDDAO.create(facturaDet);
 	    	}
-			facturaC.setListaFacturaDetalle(listFacuraDetalle);
-			facturaCDAO.create(facturaC);
+			
 		}
 		else {
 			facturaC.setPacienteFactura(paciente);
+			facturaCDAO.create(facturaC);
 			for (int i = 1; i <= catidadFactura; i++) {
 	    		double costo = Double.parseDouble(request.getParameter("costo"+i));
 	    		String descripcion = request.getParameter("desc"+i);
 	    		FacturaDetalle facturaDet = new FacturaDetalle(descripcion, costo);
-	    		listFacuraDetalle.add(facturaDet);
+	    		facturaDet.setFacturaDetalleCabecera(facturaC);
+	    		facturaDDAO.create(facturaDet);
 	    	}
-			facturaC.setListaFacturaDetalle(listFacuraDetalle);
-			facturaCDAO.create(facturaC);
+			
 			sesion.setAttribute("busquedaPaciente", null);
 		}
 		response.sendRedirect("http://localhost:8080/ConsultorioMedico/Secretaria/Factura.jsp");

@@ -20,6 +20,7 @@ public class CitaMedica implements Serializable {
 	private int id;
 	private String fecha;
 	private String nombreSala;
+	private char estado;
 	@ManyToOne
 	@JoinColumn
 	
@@ -83,6 +84,26 @@ public class CitaMedica implements Serializable {
 	public void setPaciente(Paciente citaMedica) {
 		this.citaMedica = citaMedica;
 	}
+
+	public char getEstado() {
+		return estado;
+	}
+
+
+	public void setEstado(char estado) {
+		this.estado = estado;
+	}
+
+
+	public Paciente getCitaMedica() {
+		return citaMedica;
+	}
+
+
+	public void setCitaMedica(Paciente citaMedica) {
+		this.citaMedica = citaMedica;
+	}
+
 
 	@Override
 	public String toString() {

@@ -51,11 +51,12 @@ public class AgregarCitaMedica extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession sesion = request.getSession();
 		String fecha = request.getParameter("fecha");
+		String hora = request.getParameter("registration-time");
 		String sala = request.getParameter("sala");
 		String cedulaM = request.getParameter("cedulaMe");
 		String cedulap = request.getParameter("paciente");
 		doGet(request, response);
-		System.out.println("Datos Cita medica> "+fecha+" | "+sala+ " | "+cedulaM+" | "+cedulap);
+		System.out.println("Datos Cita medica> "+fecha+" | "+hora+" | "+sala+ " | "+cedulaM+" | "+cedulap);
 		
 		PacienteDAO pacDao = DAOFactory.getFactory().getPacienteDAO();
 		MedicoDAO medDao = DAOFactory.getFactory().getMedicDAO();
@@ -69,7 +70,7 @@ public class AgregarCitaMedica extends HttpServlet {
 		
 		
 		try {
-			CitaMedica citM = new CitaMedica(0, fecha,sala);
+			CitaMedica citM = new CitaMedica(0, fecha+" "+hora,sala);
 			citM.setMedico(medico);
 			citM.setPaciente(paciente);
 			ctDao.create(citM);

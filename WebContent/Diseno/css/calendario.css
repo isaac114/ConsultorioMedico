@@ -1,0 +1,32 @@
+
+
+.form-signin {
+    max-width: 500px;
+    padding: 15px;
+    margin:100px;
+    margin-top:70px;
+
+  }
+
+.panel-body {
+	background-color: #b3b3b3;
+}
+.input-group-addon
+{
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color: #cccccc;
+}
+
+.form-signup input[type="text"],.form-signup input[type="password"] { border: 2px solid rgb(50, 118, 177); }
+.fullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('');
+    background-repeat:repeat;
+  }

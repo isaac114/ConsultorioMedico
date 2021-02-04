@@ -23,4 +23,12 @@ public class JPACitaMedicaDAO extends JPAGenericDAO<CitaMedica, Integer> impleme
 		return citas;
 	}
 
+	@Override
+	public List<CitaMedica> findHorario() {
+		String query = "SELECT c FROM CitaMedica c WHERE c.estado = 'A'";
+		List<CitaMedica> citas = em.createQuery(query).getResultList();
+		em.close();
+		return citas;
+	}
+
 }

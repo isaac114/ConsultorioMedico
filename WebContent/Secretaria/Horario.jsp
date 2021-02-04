@@ -5,10 +5,13 @@
 	<%@ page import="entidades.Medico" %>
 	<%@ page import="entidades.Paciente" %>
 	<%@ page import="entidades.CitaMedica" %>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
 	<meta content="" name="description"></meta>
 	<meta content="" name="keywords"></meta>
@@ -38,9 +41,10 @@
 				crossorigin="anonymous">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
 				rel="stylesheet">
-    
-<title>Listar</title>
-
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet"
+					href="http://localhost:8080/ConsultorioMedico/Diseno/css/calendario.css">
+<title>Calendario</title>
 <style type="text/css">
   	.navbar.bg-light{
   		background-color: #000 !important;
@@ -185,10 +189,10 @@
   		text-decoration: none;
   	}
   </style>
-  
-  
+  			
 </head>
 <body>
+	<!------ Include the above in your HEAD tag ---------->
 <div id="page-container" class="main-admin">
 	  	<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
 		  <a class="navbar-brand" href="#"></a>
@@ -244,7 +248,7 @@
 	  				<a href="http://localhost:8080/ConsultorioMedico/Secretaria/ListarCitasMedicas.jsp" class="set-width text-center display-inline-block my-1"><i class="fa fa-list"></i></a>
 	  				<a href="#" class="set-width text-center display-inline-block my-1"><i class="fa fa-sticky-note-o"></i></a>
 	  				<a href="#" class="set-width text-center display-inline-block my-1"><i class="fa fa-file-text"></i></a>
-	  				<a href="http://localhost:8080/ConsultorioMedico/Secretaria/CitasMedicas.jsp" class="set-width text-center display-inline-block my-1"><i class="fa fa-sticky-note-o"></i></a>
+	  				<a href="http://localhost:8080/ConsultorioMedico/Secretaria/CitasMedicas.jsp" action="http://localhost:8080/ConsultorioMedico/ListarCitas" class="set-width text-center display-inline-block my-1"><i class="fa fa-sticky-note-o"></i></a>
 	  				<a href="#" class="set-width text-center display-inline-block my-1"><i class="fa fa-database"></i></a>
 	  			</div>
 	  		</div>
@@ -254,8 +258,10 @@
 		<% CitaMedica cita = new CitaMedica(); %> 
 		<% List<CitaMedica> list= (List<CitaMedica>)request.getAttribute("citas"); %>
 	       
- <div class="container-md">
-    	 <div class="row">
+
+	<div class="container">
+			
+			 <div class="row">
                   <div class="col-md-12">
                      <div class="full">
                         <div class="heading_main text_align_center">
@@ -278,31 +284,25 @@
                      </div>
                   </div>
                </div>
-	       
-	        <div class="row">
-                  <div class="col-md-12">
-                     <div class="full">
-                        <div class="heading_main text_align_center">
-                        <br/>
-                          <br/>
-                           <h2>Listar Citas </h2>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-	       <table class="table">
-			  <thead class="thead-dark">
-			    <tr>
-			      <th scope="col">ID</th>
-			      <th scope="col">Fecha</th>
-			      <th scope="col">Salas </th>
-			      <th scope="col">Paciente-Nombres </th>
-			      <th scope="col">Paciente-Apellidos </th>
-			      <th scope="col">Medico-Nombres </th>
-			      <th scope="col">Medico-Apellidos </th>
+               <div class="row">
+			        <div class="col-md-12">
+			            <h2>Calendario - Cita</h2>
+			        </div>
+               <div class=col-xs-4>
+               	 <table class="table table-striped table-condensed">
+                  <thead>
+                   <tr>
+                   		  <th scope="col">Código</th>
+					      <th scope="col">Fecha</th>
+					      <th scope="col">Salas </th>
+					      <th scope="col">Medico-Nombres </th>
+					      <th scope="col">Medico-Apellidos </th>
+					      <th scope="col"> Especialidad</th>
+					      <th scope="col">Acción</th>
 			    </tr>
-			  </thead>
-			  <tbody class="bg-light">
+              </thead>   
+              <tbody>
+                 <tbody class="bg-light">
 			  
 				  <% for(int i =1 ; i < list.size(); i++) { %>
 		           	  
@@ -313,16 +313,19 @@
 		               <td><%out.println(cita.getNombreSala());%></td>
 		               <td><%out.println(cita.getMedico().getNombres());%></td>
 		               <td><%out.println(cita.getMedico().getApellidos());%></td>
-		               <td><%out.println(cita.getPaciente().getNombres());%></td>
-		               <td><%out.println(cita.getPaciente().getApellidos());%></td>
+		               <td><%out.println(cita.getMedico().getEspecialidad());%></td>
+		          		<td><a href="http://www.jquery2dotnet.com" class="btn btn-sm btn-primary btn-block" role="button">buy</a></td>
 		          		</tr>
 		              <% } %>
 			  </tbody>
-			</table>
+         
+              </table>
+               </div>
 	</div>
-	</div>
-	
-	<!-- Optional JavaScript -->
+
+</div>
+
+<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

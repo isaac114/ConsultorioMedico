@@ -30,8 +30,8 @@ public class test {
 		FacturaDetalleDAO facDetDAO = DAOFactory.getFactory().getFacturaDetalleDAO();
 		System.out.println();  
 		
-	    Medico med = new Medico(0, "Eduardo", "Chavez", "12", "isaac.114", "123", "01072653", "Obstetra");
-	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "34", "we", "123", "we");
+	    Medico med = new Medico(0, "Eduardo", "Chavez", "12", "isaac.114", "123", "01072653", "Obstetra","M");
+	    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "34", "we", "123", "we","P");
 	    HistorialClinico hc = new HistorialClinico(0, med, pac);
 	    ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	    RecetaMedica rm = new RecetaMedica(0, "Complejo B", 10, "Cada 10 hrs", pac, cc);

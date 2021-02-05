@@ -29,5 +29,7 @@ public abstract class DAOFactory {
     public abstract FacturaCabeceraDAO getFacturaCabeceraDAO();
     
     public abstract FacturaDetalleDAO getFacturaDetalleDAO();
+    
+    public abstract PersonaDAO getPersonaDAO();
 
 }

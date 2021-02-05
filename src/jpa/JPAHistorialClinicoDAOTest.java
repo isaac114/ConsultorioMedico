@@ -14,10 +14,10 @@ import entidades.Medico;
 import entidades.Paciente;
 
 class JPAHistorialClinicoDAOTest {
-	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra");
-    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "123", "we", "we");
-    Medico med2 = new Medico(0, "Eduardo2", "Chavez2", "01073710832", "isaac.1142", "123", "010726532", "Obstetra");
-    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "123", "we2", "we2");
+	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra","M");
+    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "123", "we", "we","P");
+    Medico med2 = new Medico(0, "Eduardo2", "Chavez2", "01073710832", "isaac.1142", "123", "010726532", "Obstetra","M");
+    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "123", "we2", "we2","P");
     HistorialClinico hc = new HistorialClinico(0, med, pac);
     MedicoDAO medicoDao = DAOFactory.getFactory().getMedicDAO();
 	PacienteDAO pacienteDao = DAOFactory.getFactory().getPacienteDAO();

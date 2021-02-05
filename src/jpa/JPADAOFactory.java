@@ -9,6 +9,7 @@ import dao.HistorialClinicoDAO;
 import dao.MedicoDAO;
 import dao.OrdenMedicaDAO;
 import dao.PacienteDAO;
+import dao.PersonaDAO;
 import dao.RecetaMedicaDAO;
 
 public class JPADAOFactory extends DAOFactory{
@@ -65,6 +66,12 @@ public class JPADAOFactory extends DAOFactory{
 	public FacturaDetalleDAO getFacturaDetalleDAO() {
 		// TODO Auto-generated method stub
 		return new JPAFacturaDetalleDAO();
+	}
+
+	@Override
+	public PersonaDAO getPersonaDAO() {
+		// TODO Auto-generated method stub
+		return new JPAPersonaDAO();
 	}
 
 	

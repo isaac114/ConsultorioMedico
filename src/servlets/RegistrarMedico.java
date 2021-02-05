@@ -24,19 +24,21 @@ public class RegistrarMedico extends HttpServlet {
 		String apellidos = request.getParameter("apellidos");
 		String cedula = request.getParameter("cedula");
 		String correo = request.getParameter("correo");
+		String contrasena = request.getParameter("contrasena");
 		String telefono = request.getParameter("telefono");
 		String especialidad = request.getParameter("especialidad");
 		
-		System.out.println("Datos recuperados medico: " + nombres + " " + apellidos + " " + cedula + " " + correo + " " + telefono + " " + especialidad);
+		System.out.println("Datos recuperados medico: " + nombres + " " + apellidos + " " + cedula + " " + correo + " " + contrasena + " " + telefono + " " + especialidad);
 		
 		try {
 			
 			MedicoDAO medicoDao = DAOFactory.getFactory().getMedicDAO();
-			Medico medico = new Medico(0, nombres,apellidos,cedula,correo,telefono,especialidad);
+			Medico medico = new Medico(0, nombres,apellidos,cedula,correo,contrasena,telefono,especialidad,"M");
 			medicoDao.create(medico);
 			
 		}catch(Exception e) {
 			
+			System.out.println("Error al registrar medico...");
 			System.out.println("Error: " + e.getStackTrace());
 		
 		}

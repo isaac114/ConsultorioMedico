@@ -25,8 +25,8 @@ import entidades.Paciente;
  *
  */
 class JPAConsultaClinicaDAOTest {
-	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra");
-    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we");
+	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra","M");
+    Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we","P");
     HistorialClinico hc = new HistorialClinico(0, med, pac);
 	ConsultaClinica cc = new ConsultaClinica(0, "Tos", "Neumonia", hc);
 	

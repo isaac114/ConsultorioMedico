@@ -32,7 +32,7 @@ public class Persona implements Serializable {
 	}
 
 
-	public Persona(int id, String nombres, String apellidos, String cedula, String correo, String contrasena, String telefono) {
+	public Persona(int id, String nombres, String apellidos, String cedula, String correo, String contrasena, String telefono, String rol) {
 		super();
 		this.id = id;
 		this.nombres = nombres;
@@ -41,6 +41,7 @@ public class Persona implements Serializable {
 		this.correo = correo;
 		this.contrasena = contrasena;
 		this.telefono = telefono;
+		this.rol = rol;
 	}
 
 

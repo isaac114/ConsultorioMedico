@@ -65,7 +65,7 @@ public class AgregarFactura extends HttpServlet {
 			String correo=request.getParameter("correo");
 			String contrasena = request.getParameter("contrasena");
 			String telefono=request.getParameter("telefono");
-			Paciente pacienteNuevo=new Paciente(0,nombres,apellidos,cedula,correo,contrasena,telefono);
+			Paciente pacienteNuevo=new Paciente(0,nombres,apellidos,cedula,correo,contrasena,telefono,"P");
 			pacDAO.create(pacienteNuevo);
 			facturaC.setPacienteFactura(pacienteNuevo);
 			facturaCDAO.create(facturaC);

@@ -24,18 +24,20 @@ public class RegistrarPacienteJor extends HttpServlet {
 		String apellidos = request.getParameter("apellidos");
 		String cedula = request.getParameter("cedula");
 		String correo = request.getParameter("correo");
+		String contrasena = request.getParameter("contrasena");
 		String telefono = request.getParameter("telefono");
 		
-		System.out.println("Datos recuperados del paciente: "+nombres+" "+apellidos+" "+cedula+" "+correo+" "+telefono);
+		System.out.println("Datos recuperados del paciente: "+nombres+" "+apellidos+" "+cedula+" "+correo+" "+contrasena+" "+telefono);
 		
 		try {
 		
 			PacienteDAO pacienteDao = DAOFactory.getFactory().getPacienteDAO();
-			Paciente paciente = new Paciente(0, nombres,apellidos,cedula,correo,telefono);
+			Paciente paciente = new Paciente(0, nombres,apellidos,cedula,correo,contrasena,telefono,"P");
 			pacienteDao.create(paciente);
 			
 		}catch(Exception e) {
 			
+			System.out.println("Error al registrar paciente...");
 			System.out.println("Error: " + e.getStackTrace());
 		
 		}

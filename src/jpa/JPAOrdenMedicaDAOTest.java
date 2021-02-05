@@ -19,10 +19,10 @@ class JPAOrdenMedicaDAOTest {
 	PacienteDAO pacienteDao = DAOFactory.getFactory().getPacienteDAO();
 	OrdenMedicaDAO ordenDao = DAOFactory.getFactory().getOrdenMedicaDAO();
 	
-	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Pbstetra");
-	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we");
-	Medico med2 = new Medico(0, "Eduardo2", "Chavez2", "01073710832", "isaac.1142", "123", "010726532", "Obstetra");
-    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "we2", "123", "we2");
+	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Pbstetra","M");
+	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we","P");
+	Medico med2 = new Medico(0, "Eduardo2", "Chavez2", "01073710832", "isaac.1142", "123", "010726532", "Obstetra","M");
+    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "we2", "123", "we2","P");
 	OrdenMedica om = new OrdenMedica(0, "7/1/2021", "Resonancia Magnetica", pac, med);
 	 
 	int tiempoLimite = 70;

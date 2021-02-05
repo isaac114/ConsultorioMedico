@@ -10,7 +10,7 @@ import dao.MedicoDAO;
 import entidades.Medico;
 
 class JPAMedicoDAOTest {
-	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra");
+	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Obstetra","M");
 	MedicoDAO medicoDao = DAOFactory.getFactory().getMedicDAO();
 	int tiempoLimite = 70;
 

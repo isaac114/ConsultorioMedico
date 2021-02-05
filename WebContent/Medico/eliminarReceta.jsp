@@ -138,7 +138,7 @@
 				</div>
 				<div style="height: 30px"></div>
 				<form method="post"
-					action="/ConsultorioMedico/EliminarOrden">
+					action="/ConsultorioMedico/EliminarReceta">
 					<div class="form-group">
 						<label style="color: white; font-size: 22px" for="nombre">C.I del Paciente</label> 
 						<input style="font-size: 18px" type="text" class="form-control"

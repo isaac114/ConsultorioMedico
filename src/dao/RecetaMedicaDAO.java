@@ -6,5 +6,5 @@ import entidades.RecetaMedica;
  */
 public interface RecetaMedicaDAO extends GenericDAO<RecetaMedica, Integer> {
 
-
+	public abstract RecetaMedica buscarReceta(String cedula);
 }

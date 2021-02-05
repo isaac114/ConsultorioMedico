@@ -67,14 +67,8 @@
 						<a style="font-size: 15px" class="dropdown-item"
 							href="http://localhost:8080/ConsultorioMedico/AgregarConsulta">Agregar
 							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
-							Consultas</a>
+							href="http://localhost:8080/ConsultorioMedico/EliminarConsulta">Eliminar
+							Consulta</a>
 					</div>
 				</div>
 				<div class="dropdown">
@@ -87,13 +81,7 @@
 						<a style="font-size: 15px" class="dropdown-item"
 							href="http://localhost:8080/ConsultorioMedico/AgregarReceta">Agregar
 							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/AgregarReceta">Eliminar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
+							href="http://localhost:8080/ConsultorioMedico/EliminarReceta">Eliminar
 							Preescripcion</a>
 					</div>
 				</div>

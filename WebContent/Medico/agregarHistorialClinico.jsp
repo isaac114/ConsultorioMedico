@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.List"%>
 <%@ page import="entidades.Paciente"%>
+<%@ page import="entidades.Medico"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,16 +57,22 @@
 		<div class=col-xs-4>
 			<form method="post" action="/ConsultorioMedico/AgregarHistorialClinico">
 				<div class="form-group">
+				<% Medico med= (Medico) request.getSession().getAttribute("medicoLog");%>
+					<label>Doctor: <%out.println(med.getNombres());%> </label>
+				</div>
+				<div class="form-group">
 					<label>Escoja el Paciente:</label>
 					<select  id="nomPac" name="nomPac" class="form-control"required >
 	                   <option> </option>  
 	                   <%
 	                   	List<Paciente> listPaciente = (List<Paciente>) request.getSession().getAttribute("listaPaciente");
 	                       for (Paciente pac : listPaciente) {
-	                           out.println("<option value=" + pac.getNombres() + ">" + pac.getNombres() + "</option>");
+	                           out.println("<option value=" + pac.getCedula() + ">" + pac.getNombres() + "</option>");
 	                       } %>
 	                  </select>	
 				</div>
+				<button type="submit" style="font-size: 18px" type="Agregar"
+						class="btn btn-primary"><small style="font-size: 15px">Agregar Historial</button>
 			</form>
 		</div>
 		</div>

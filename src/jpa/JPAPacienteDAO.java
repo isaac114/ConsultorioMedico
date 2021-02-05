@@ -34,6 +34,7 @@ public class JPAPacienteDAO extends JPAGenericDAO<Paciente, Integer> implements 
 		
 		return listPaciente;
 	}
+
 	
 	
 		

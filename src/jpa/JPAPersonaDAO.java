@@ -2,6 +2,7 @@ package jpa;
 
 import javax.persistence.Query;
 
+
 import dao.PersonaDAO;
 import entidades.Paciente;
 import entidades.Persona;
@@ -14,10 +15,17 @@ public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements Pe
 	
 	@Override
 	public Persona buscar(String correo, String contrasena) {
-		Query query = em.createQuery("SELECT p FROM Persona p WHERE p.correo = :correo AND p.contrasena = :contrasena");
-		query.setParameter("contrasena", contrasena);
-		Persona persona = (Persona) query.getSingleResult();
-		return persona;
+		Persona usuario=null;
+		String queryFindUsuario="SELECT u FROM Persona u WHERE u.correo=:correoUsu AND u.contrasena=:contrasenaUsu";
+		System.out.println("Correo"+correo+" passwprd"+contrasena);
+		try {
+			usuario = (Persona) em.createQuery(queryFindUsuario).setParameter("correoUsu",correo ).setParameter("contrasenaUsu", contrasena).getSingleResult();
+			em.close();
+		}catch(Exception e) {
+			System.out.println("Error al buscar El usuario");
+		}
+		
+		return usuario;
 	}
 
 	

@@ -13,7 +13,7 @@ import entidades.Paciente;
 class JPAPacienteDAOTest {
 	PacienteDAO pacienteDao = DAOFactory.getFactory().getPacienteDAO();
 	
-	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we");
+	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we");
 	
 	int tiempoLimite = 70;
 

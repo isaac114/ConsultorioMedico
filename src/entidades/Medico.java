@@ -28,8 +28,8 @@ public class Medico extends Persona {
 	}
 	
 	
-	public Medico(int id, String nombres, String apellidos, String cedula, String correo, String telefono, String especialidad) {
-		super(id, nombres, apellidos, cedula, correo, telefono);
+	public Medico(int id, String nombres, String apellidos, String cedula, String correo, String contrasena, String telefono, String especialidad) {
+		super(id, nombres, apellidos, cedula, correo, contrasena, telefono);
 		this.especialidad = especialidad;
 	}
 	

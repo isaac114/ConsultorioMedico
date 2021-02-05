@@ -21,10 +21,10 @@ class JPACitaMedicaDAOTest {
 	PacienteDAO pacienteDao = DAOFactory.getFactory().getPacienteDAO();
 	CitaMedicaDAO citaMedicaDAO = DAOFactory.getFactory().getCitaMedicaDAO();
 	
-	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "01072653", "Pbstetra");
-	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "we");
-	Medico med2 = new Medico(0, "Jessica", "Maribel", "0106835762", "jessica.21", "01072699", "Odontologia");
-    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "we2", "we2");
+	Medico med = new Medico(0, "Eduardo", "Chavez", "0107371083", "isaac.114", "123", "01072653", "Pbstetra");
+	Paciente pac = new Paciente(0, "Juan Luis", "Guerra", "0293847263", "we", "123", "we");
+	Medico med2 = new Medico(0, "Jessica", "Maribel", "0106835762", "jessica.21", "123", "01072699", "Odontologia");
+    Paciente pac2 = new Paciente(0, "Juan Luis2", "Guerra2", "02938472632", "we2", "123", "we2");
 	CitaMedica citaMedica1 = new CitaMedica(0,"7/1/2021","Sala 1");
 			
 	int tiempoLimite = 70;

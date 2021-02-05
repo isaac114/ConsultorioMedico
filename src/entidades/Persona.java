@@ -23,6 +23,7 @@ public class Persona implements Serializable {
 	private String apellidos;
 	private String cedula;
 	private String correo;
+	private String contrasena;
 	private String telefono;
 	private String rol;
 	
@@ -31,13 +32,14 @@ public class Persona implements Serializable {
 	}
 
 
-	public Persona(int id, String nombres, String apellidos, String cedula, String correo, String telefono) {
+	public Persona(int id, String nombres, String apellidos, String cedula, String correo, String contrasena, String telefono) {
 		super();
 		this.id = id;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.cedula = cedula;
 		this.correo = correo;
+		this.contrasena = contrasena;
 		this.telefono = telefono;
 	}
 
@@ -90,7 +92,14 @@ public class Persona implements Serializable {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+	
+	public String getContrasena() {
+		return contrasena;
+	}
 
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}
 
 	public String getTelefono() {
 		return telefono;

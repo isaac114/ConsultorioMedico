@@ -1,6 +1,8 @@
 package servlets;
 
-import java.io.IOException;  
+import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +31,7 @@ public class ComprobarUsuario extends HttpServlet {
 		System.out.println("Servlet: ComprobarUsuario.java - Datos: "+correo+" "+contrasena);
 		
 		PersonaDAO personaDao = DAOFactory.getFactory().getPersonaDAO();
-		Persona persona = personaDao.buscar(correo, contrasena);
+		Persona persona =personaDao.buscar(correo, contrasena);
 		
 		if(persona != null) {
 			
@@ -56,18 +58,20 @@ public class ComprobarUsuario extends HttpServlet {
 			} else if(rol.equals("M")) {
 				
 				System.out.println("El usuario es Medico...");
-				
+				List<Paciente> listPacientes=  DAOFactory.getFactory().getPacienteDAO().listPacientes();
 				MedicoDAO medicoDao = DAOFactory.getFactory().getMedicDAO();
 				Medico medico = medicoDao.read(codigo);
-				
+				System.out.println("Lista de PAciente"+listPacientes);
 				String nombre_medico = medico.getNombres();
 				String apellido_medico = medico.getApellidos();
 				String cedula_medico = medico.getCedula();
 				String correo_medico = medico.getCorreo();
 				String telefono_medico = medico.getTelefono();
 				String especialidad_medico = medico.getEspecialidad();
-				
+				request.getSession().setAttribute("listaPaciente", listPacientes);
+				request.getSession().setAttribute("medicoLog", medico);
 				request.getSession().setAttribute("SesionMedico", "Logeado-Medico");
+				
 				//response.sendRedirect("http://localhost:8080/ConsultorioMedico/JPSs/VentanaUsuario.jsp?correo="+email);
 				
 			} else if(rol.equals("P")) {

@@ -1,5 +1,9 @@
 package jpa;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Query;
 
 import dao.PacienteDAO;
@@ -22,6 +26,16 @@ public class JPAPacienteDAO extends JPAGenericDAO<Paciente, Integer> implements 
 		Paciente paciente = (Paciente) query.getSingleResult();
 		return paciente;
 	}
+
+	@Override
+	public List<Paciente> listPacientes() {
+		Query query = em.createQuery("SELECT p FROM Paciente p ");
+		List<Paciente> listPaciente= (List<Paciente>) query.getResultList();
+		
+		return listPaciente;
+	}
+	
+	
 		
 	
 }

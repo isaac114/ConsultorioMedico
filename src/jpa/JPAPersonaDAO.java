@@ -16,15 +16,15 @@ public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements Pe
 	@Override
 	public Persona buscar(String correo, String contrasena) {
 		Persona usuario=null;
-		String queryFindUsuario="SELECT u FROM Persona u WHERE u.correo=:correoUsu AND u.contrasena=:contrasenaUsu";
-		System.out.println("Correo"+correo+" passwprd"+contrasena);
-		try {
-			usuario = (Persona) em.createQuery(queryFindUsuario).setParameter("correoUsu",correo ).setParameter("contrasenaUsu", contrasena).getSingleResult();
+		System.out.println(correo+"----"+contrasena);
+		String queryFindUsuario="SELECT p FROM Persona p WHERE p.correo=:correoUsu AND p.contrasena=:contrasenaUsu";
+		try{
+			usuario = (Persona) em.createQuery(queryFindUsuario).setParameter("correoUsu",correo).setParameter("contrasenaUsu",contrasena).getSingleResult();
+			System.out.println("El usuario"+ usuario);
 			em.close();
-		}catch(Exception e) {
-			System.out.println("Error al buscar El usuario");
+		}catch (Exception e) {
+			System.out.println("No se recupero el Usuario");
 		}
-		
 		return usuario;
 	}
 

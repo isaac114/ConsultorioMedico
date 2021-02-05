@@ -4,6 +4,7 @@ import javax.persistence.Query;
 
 import dao.MedicoDAO;
 import entidades.Medico;
+import entidades.Persona;
 /*
  * Autor Isaac Chavez
  */

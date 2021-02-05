@@ -24,7 +24,7 @@ public class Persona implements Serializable {
 	private String cedula;
 	private String correo;
 	private String telefono;
-	
+	private String rol;
 	
 	public Persona() {
 		super();
@@ -101,6 +101,13 @@ public class Persona implements Serializable {
 		this.telefono = telefono;
 	}
 	
-	
+	public String getRol() {
+		return rol;
+	}
+
+
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
    
 }

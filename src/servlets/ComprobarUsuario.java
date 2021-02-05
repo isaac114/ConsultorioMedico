@@ -77,7 +77,17 @@ public class ComprobarUsuario extends HttpServlet {
 			} else if(rol.equals("S")) {
 				
 				System.out.println("El usuario es Secretaria...");
+				String nombre_secre = persona.getNombres();
+				String apellido_secre = persona.getApellidos();
+				String cedula_secre = persona.getCedula();
+				String correo_secre = persona.getCorreo();
+				String telefono_secre = persona.getTelefono();
 				
+				request.getSession().setAttribute("SesionSecretaria", "Logeado-Secretaria");
+				response.sendRedirect("http://localhost:8080/ConsultorioMedico/Secretaria/IndexSecretaria.jsp?nombre="+nombre_secre
+									  +"&apellido="+apellido_secre+"&cedula="+cedula_secre+"&correo="+correo_secre
+									  +"&telefono="+telefono_secre);
+								
 			} else {
 				
 				System.out.println("Error usuario anormal...");

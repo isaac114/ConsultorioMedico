@@ -16,7 +16,7 @@ public class JPARecetaMedicaDAO extends JPAGenericDAO<RecetaMedica, Integer> imp
 		@Override
 		public RecetaMedica buscarReceta(String cedula) {
 			// TODO Auto-generated method stub
-			Query query = em.createQuery("SELECT r FROM RecetaMedica r WHERE r.pacienteReceta.cedula = :cedula");
+			Query query = em.createQuery("SELECT r FROM RecetaMedica r WHERE r.pacienteReceta.cedula = "+cedula);
 			RecetaMedica receta = (RecetaMedica) query.getSingleResult();
 			query.setParameter("cedula", cedula);
 			return receta;

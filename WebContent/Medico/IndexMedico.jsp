@@ -92,17 +92,11 @@
 						<small style="font-size: 15px">Ordenes Medicas</small>
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/AnadirProductos?eid=<%=request.getParameter("eid") %>">Agregar
+						 <a style="font-size: 15px" class="dropdown-item"
+							href="http://localhost:8080/ConsultorioMedico/AgregarOrden">Agregar
 							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
-							Ordeness</a>
+							href="http://localhost:8080/ConsultorioMedico/EliminarOrden">Eliminar
+							Ordenes</a>
 					</div>
 				</div>
 				<!--

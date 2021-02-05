@@ -41,7 +41,7 @@
 		<div class="row">
 			<div class="col-xs-11">
 				<img
-					src="http://localhost:8080/ConsultorioMedico/Diseno/Imagenes/logos2.png"
+					src="http://localhost:8080/ConsultorioMedico/Diseno/Imagenes/l1.png"
 					id="logo">
 			</div>
 
@@ -54,7 +54,7 @@
 		<div class="row">
 			<!-- SECCION DE LOS BOTONES DE NAVEGACION -->
 			<div class=col-xs-3>
-				<img style="height: 150px; width: 200px; padding-bottom: 20px;"
+				<img style="height: 150px; width: 200px; padding-bottom: 20px; padding-left: 30px"
 					alt=""
 					src="http://localhost:8080/ConsultorioMedico/Diseno/Imagenes/adm.png">
 				<div class="dropdown">
@@ -67,14 +67,8 @@
 						<a style="font-size: 15px" class="dropdown-item"
 							href="http://localhost:8080/ConsultorioMedico/AgregarConsulta">Agregar
 							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Consulta</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
-							Consultas</a>
+							href="http://localhost:8080/ConsultorioMedico/EliminarConsulta">Eliminar
+							Consulta</a>
 					</div>
 				</div>
 				<div class="dropdown">
@@ -85,15 +79,9 @@
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/Administrador/agregarConsulta.jsp">Agregar
+							href="http://localhost:8080/ConsultorioMedico/AgregarReceta">Agregar
 							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Preescripcion</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
+							href="http://localhost:8080/ConsultorioMedico/EliminarReceta">Eliminar
 							Preescripcion</a>
 					</div>
 				</div>
@@ -104,17 +92,11 @@
 						<small style="font-size: 15px">Ordenes Medicas</small>
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/AnadirProductos?eid=<%=request.getParameter("eid") %>">Agregar
+						 <a style="font-size: 15px" class="dropdown-item"
+							href="http://localhost:8080/ConsultorioMedico/AgregarOrden">Agregar
 							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EliminarProducto?eid=<%=request.getParameter("eid") %>">Eliminar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/EditarProducto?eid=<%=request.getParameter("eid") %>">Editar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/BuscarProducto?eid=<%=request.getParameter("eid") %>">Buscar
-							Ordenes</a> <a style="font-size: 15px" class="dropdown-item"
-							href="http://localhost:8080/ConsultorioMedico/ListarProductos?eid=<%=request.getParameter("eid") %>">Listar
-							Ordeness</a>
+							href="http://localhost:8080/ConsultorioMedico/EliminarOrden">Eliminar
+							Ordenes</a>
 					</div>
 				</div>
 				<!--

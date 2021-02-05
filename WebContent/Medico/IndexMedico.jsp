@@ -99,6 +99,18 @@
 							Ordenes</a>
 					</div>
 				</div>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false" style=" width: 250px;">
+						<small style="font-size: 15px">Historial</small>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						 <a style="font-size: 15px" class="dropdown-item"
+							href="http://localhost:8080/ConsultorioMedico/Medico/agregarHistorialClinico.jsp">Agregar
+							Historial</a>
+					</div>
+				</div>
 				<!--
 				<div class="dropdown">
 				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
